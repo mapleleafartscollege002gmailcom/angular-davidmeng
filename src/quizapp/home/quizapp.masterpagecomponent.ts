@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './quizapp.masterpageview.html',
   styleUrls: [ './quizapp.masterpagestyle.css' ]
 })
-export class AppComponent  {
+export class MasterPageComponent  {
   name = 'Angular 6';
 }

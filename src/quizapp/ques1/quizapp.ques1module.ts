@@ -5,6 +5,7 @@ import { NgModule } from '@angular/core';
 import {FormsModule , ReactiveFormsModule} from "@angular/forms"
 import {RouterModule} from "@angular/router"
 import { ques1component } from './quizapp.ques1component';
+import { Ques1Routes } from '../routing/quizapp.ques1routing';
 import {HttpModule} from "@angular/http"
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
 

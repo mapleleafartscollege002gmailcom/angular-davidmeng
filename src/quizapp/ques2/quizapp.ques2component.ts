@@ -7,4 +7,6 @@ import { HomeComponent } from '../home/quizapp.homecomponent';
 })
 export class ques2component  {
   @Input() name: string;
+
+  @input ('parentdata') public name;
 }

@@ -1,4 +1,23 @@
 <p>
   Start editing to see some magic happen :)
 </p>
-<hello name="{{ name }}"></hello>
+<table>
+    <tr  halign="left">
+        <td colspan="2" halign="left"><img  src="https://www.procom.ca/assets/images/procom-logo.svg"/><br></td>
+    </tr>
+    <tr >
+        <td  valign="top"><a [routerLink]="['Home']">Home</a><br>
+            <a [routerLink]="['ques1/next']">Question 1</a><br>
+            <a [routerLink]="['ques2/next']">Question 2</a><br>
+        </td>
+        <td>
+                <div>
+                        <router-outlet></router-outlet>
+                </div>
+        </td>
+    </tr>
+    <tr ><td colspan="2"></td></tr>
+    <tr halign="center">
+        <td colspan="2">@Copyright MapleCity Consulting Inc. 2019-2020</td>
+    </tr>
+</table>

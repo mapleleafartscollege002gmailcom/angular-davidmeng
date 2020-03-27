@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-@Component({
-  selector: 'hello',
+@Component({ 
   templateUrl: './quizapp.homeview.html',
   styles: [`h1 { font-family: Lato; }`]
 })

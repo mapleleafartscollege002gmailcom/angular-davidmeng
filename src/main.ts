@@ -3,7 +3,7 @@ import './polyfills';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { AppModule } from './quizapp/quizapp.mainmodule';
+import { AppModule } from './quizapp/home/quizapp.mainmodule';
 
 platformBrowserDynamic().bootstrapModule(AppModule).then(ref => {
   // Ensure Angular destroys itself on hot reloads.

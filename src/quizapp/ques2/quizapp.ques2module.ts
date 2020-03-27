@@ -4,9 +4,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import {FormsModule , ReactiveFormsModule} from "@angular/forms"
 import {RouterModule} from "@angular/router"
-import { CustomerComponent } from './CustomerApp.CustomerComponent';
-import {GridComponent} from "../Utility/CustomerApp.GridComponent"
-import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
+import { ques2component } from './quizapp.ques2component';
+import { Ques2Routes } from '../routing/quizapp.ques2routing';
 import {HttpModule} from "@angular/http"
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
 /*import { MyInterceptor } from '../Utility/Utility.HttpInterceptor';*/
@@ -14,24 +13,21 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-     CustomerComponent , GridComponent
+     ques2component 
   ],
   imports: [
-    RouterModule.forChild(CustomerRoutes),
+    RouterModule.forChild(Ques2Routes),
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule ,
     HttpClientModule
   ],
-  exports: [
-    GridComponent
+  exports: [ 
   ],
-  providers: [
-   {provide: HTTP_INTERCEPTORS, useClass: MyInterceptor , 
-  multi:true}
+  providers: [ 
 
   ],
-  bootstrap: [CustomerComponent]
+  bootstrap: [ques2component]
 })
-export class CustomerModule { }
+export class Ques2Module { }

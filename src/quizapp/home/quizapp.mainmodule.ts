@@ -12,7 +12,7 @@ import { ques2component } from '../ques2/quizapp.ques2component';
 @NgModule({
   imports:      [
     RouterModule.forRoot(MainRoutes), BrowserModule, FormsModule ],
-  declarations: [ MasterPageComponent, HomeComponent ],
+  declarations: [ MasterPageComponent, HomeComponent,ques1component,ques2component ],
   bootstrap:    [ MasterPageComponent ]
 })
 export class AppModule { }

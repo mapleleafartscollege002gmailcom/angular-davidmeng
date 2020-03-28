@@ -1,10 +1,9 @@
 
 import { HomeComponent } from '../home/quizapp.homecomponent';
-import { questioncomponent } from '../question/quizapp.questioncomponent';
 export const MainRoutes = [
     { path: 'home', component: HomeComponent },
     { path: 'question', 
-    loadChildren: '../question/quizapp.questioncomponent#questionmodule' },
+    loadChildren: '../question/quizapp.questionmodule#questionmodule' },
     { path: '', component: HomeComponent },
     { path: '**', component: HomeComponent }    
 ];

@@ -18,8 +18,7 @@ import {QuestionRoutes } from '../routing/quizapp.questionrouting';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [ 
-  ],
+  providers: [],
   bootstrap: [questioncomponent]
 })
 export class questionmodule { }

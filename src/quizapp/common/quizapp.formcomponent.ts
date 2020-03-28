@@ -12,7 +12,7 @@ export class FormComponent{
     questions: Array<Object> = new Array<Object>();
     answers: Array<Object> = new Array<Object>();
     question : Object = new Object();
-
+selectAnswer: string="";
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
        this.questions = _questions;     

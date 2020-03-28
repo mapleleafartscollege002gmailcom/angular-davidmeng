@@ -7,16 +7,17 @@ import {Component,
     selector: "question-ui",
     templateUrl : "./quizapp.formview.html"
 })
+
 export class FormComponent{
   
     questions: Array<Object> = new Array<Object>();
     answers: Array<Object> = new Array<Object>();
     question : Object = new Object();
-selectAnswer: string="";
+    selectAnswer: string="";
+
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
        this.questions = _questions;     
-       this.question = this.questions[0];
     }
     
     @Input("form-answers")
@@ -31,5 +32,5 @@ selectAnswer: string="";
     SelectAnswer(_selected:Object){
         this.eventemitter.emit(_selected);
     }
-     
+    
 }

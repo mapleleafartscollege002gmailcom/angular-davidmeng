@@ -22,4 +22,4 @@ import {QuestionRoutes } from '../routing/quizapp.questionrouting';
   ],
   bootstrap: [questioncomponent]
 })
-export class QuestionModule { }
+export class questionmodule { }

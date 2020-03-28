@@ -1,6 +1,11 @@
-this is ques 2 page
 
-<div>
-  {{name}}
-{{QuestionModels[1].ID}}
-</div>
+
+
+
+
+
+  QuestionModels :Array<Question> = new Array<Question>();
+<form-ui [form-questions]="QuestionModels" 
+  [form-answers]="AnswerModels"
+  (answer-selected)="SelectAnswer($event)"
+></form-ui>

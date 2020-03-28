@@ -1,4 +1,43 @@
-<table>   
+<div>
+    <div class="panel-header"></div>
+    <div class="panel-body">
+        <div class="row">question.description</div>
+        <div class="row">
+          <table>   
+            <tr>
+                  <td *ngFor="let opt of question.Options">
+                      {{opt}}
+                  </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button class="btn btn-primary" (click)="SelectAnswer">Next</button>
+    </div>
+</div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <table>   
     <tr>
            <td *ngFor="let col of gridColumns">
                {{col.colName}}
@@ -12,5 +51,5 @@
             <a (click)="SelectGrid(colObj)" [routerLink]="['/Customer/Add']">select</a>
         </td>
     </tr>
-</table>
+</table>>
    

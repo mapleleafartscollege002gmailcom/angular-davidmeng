@@ -23,7 +23,6 @@ import {QuestionRoutes } from '../routing/quizapp.questionrouting';
   exports: [ 
   ],
   providers: [ 
-
   ],
   bootstrap: [questioncomponent]
 })

@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({ 
   templateUrl: './quizapp.homeview.html',
-  styles: [`h1 { font-family: Lato; }`]
+  styleUrls: [ './quizapp.masterpagestyle.css' ]
 })
 export class HomeComponent  {
 }

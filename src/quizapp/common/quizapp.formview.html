@@ -6,16 +6,21 @@
           <table>   
             <tr>
                   <td *ngFor="let opt of question.Options">
-                    <input type="radio" value={{opt}} name="OPTI" [ngModel]="selectAnswer"> {{opt}}
+                    <input type="radio" value={{opt}} name="OPTI" [(ngModel)]="selectAnswer"> {{opt}}
+                  </td>
+            </tr>
+            <tr>
+                  <td *ngFor="let ans of answers">
+                   {{ans}}
                   </td>
             </tr>
           </table>
         </div>
-        0508
+        
         {{selectAnswer}}
     </div>
     <div class="panel-footer">
-        <button class="btn btn-primary" >Next</button>
+        <button class="btn btn-primary" (click) = "SelectAnswer()" >Next</button>
     </div>
 </div>
   

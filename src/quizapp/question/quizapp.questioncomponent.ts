@@ -5,7 +5,7 @@ import {Answer} from "../home/quizapp.answer.model";
 import { HomeComponent } from '../home/quizapp.homecomponent';
 @Component({ 
   templateUrl: './quizapp.questionview.html',
-  styles: [`h1 { font-family: Lato; }`]
+  styleUrls: [ '../home/quizapp.masterpagestyle.css' ]
 })
 export class questioncomponent  {
   QuestionModel : Question = new Question();
@@ -53,7 +53,7 @@ this.QuestionModels.push(this.QuestionModel);
 
 
   SelectAnswer(_selected:Answer){
-    this.AnswerModel = _selected;
+    this.AnswerModel = _selected;alert('received');
     this.AnswerModels.push(this.AnswerModel);
   }
 

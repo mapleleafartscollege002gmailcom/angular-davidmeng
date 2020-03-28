@@ -12,7 +12,7 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-     ques2component 
+     questioncomponent 
   ],
   imports: [
     RouterModule.forChild(Ques2Routes),
@@ -27,6 +27,6 @@ import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
   providers: [ 
 
   ],
-  bootstrap: [ques2component]
+  bootstrap: [questioncomponent]
 })
 export class Ques2Module { }

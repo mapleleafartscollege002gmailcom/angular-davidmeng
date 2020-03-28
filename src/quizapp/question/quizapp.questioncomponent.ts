@@ -8,6 +8,8 @@ import { HomeComponent } from '../home/quizapp.homecomponent';
   styleUrls: [ '../home/quizapp.masterpagestyle.css' ]
 })
 export class questioncomponent  {
+
+  isHidden : boolean = false;
   QuestionModel : Question = new Question();
   QuestionModels :Array<Question> = new Array<Question>();
 

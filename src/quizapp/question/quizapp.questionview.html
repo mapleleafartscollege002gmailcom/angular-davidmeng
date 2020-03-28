@@ -1,18 +1,14 @@
-
-
-
-
 <div>Question View</div>
 
 <table>
   <tr>
-        <td *ngFor="let ans of AnswerModels">
-          {{ans}}
-        </td>
+    <td *ngFor="let ans of AnswerModels">
+      {{ans}}
+    </td>
   </tr>
 </table>
 
-<question-ui [form-questions]="QuestionModels" 
+<question-ui hidden="{{isHidden}}" [form-questions]="QuestionModels" 
   [form-answers]="AnswerModels"
   (answer-selected)="SelectAnswer($event)"
 ></question-ui>

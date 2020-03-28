@@ -4,7 +4,7 @@ import {Component,
     EventEmitter} from "@angular/core"
 
 @Component({
-    selector: "form-ui",
+    selector: "question-ui",
     templateUrl : "./quizapp.formview.html"
 })
 export class FormComponent{

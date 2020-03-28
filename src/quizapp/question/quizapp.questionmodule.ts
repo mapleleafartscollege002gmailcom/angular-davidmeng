@@ -1,3 +1,4 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import {CommonModule } from '@angular/common';
 import {NgModule } from '@angular/core';
 import {FormsModule , ReactiveFormsModule} from "@angular/forms"
@@ -8,7 +9,8 @@ import {HttpModule} from "@angular/http"
 import {HttpClientModule,HTTP_INTERCEPTORS} from "@angular/common/http"
 import {QuestionRoutes } from '../routing/quizapp.questionrouting';
 
-@NgModule({
+@NgModule({  
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
      questioncomponent , FormComponent
   ],

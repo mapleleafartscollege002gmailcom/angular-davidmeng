@@ -18,17 +18,18 @@ export class FormComponent{
        this.questions = _questions;     
        this.question = this.questions[0];
     }
+    
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
         this.answers = _answers;     
-     }
+    }
      
-     @Output("answer-selected")
-     eventemitter: EventEmitter<Object> = 
-     new EventEmitter<Object>();
+    @Output("answer-selected")
+    eventemitter: EventEmitter<Object> = 
+    new EventEmitter<Object>();
 
-     SelectAnswer(_selected:Object){
-         this.eventemitter.emit(_selected);
-     }
+    SelectAnswer(_selected:Object){
+        this.eventemitter.emit(_selected);
+    }
      
 }

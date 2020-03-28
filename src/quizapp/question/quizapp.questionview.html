@@ -8,7 +8,7 @@
   </tr>
 </table>
 
-<question-ui hidden="{{isHidden}}" [form-questions]="QuestionModels" 
+<question-ui ngHide="isHidden" [form-questions]="QuestionModels" 
   [form-answers]="AnswerModels"
   (answer-selected)="SelectAnswer($event)"
 ></question-ui>

@@ -1,4 +1,3 @@
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
@@ -12,7 +11,6 @@ import {QuestionRoutes } from '../routing/quizapp.questionrouting';
 /*import { MyInterceptor } from '../Utility/Utility.HttpInterceptor';*/
 
 @NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
      questioncomponent 
   ],

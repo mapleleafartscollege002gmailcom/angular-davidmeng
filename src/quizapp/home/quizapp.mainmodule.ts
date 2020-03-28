@@ -6,12 +6,11 @@ import { MainRoutes } from '../routing/quizapp.mainrouting';
 import {RouterModule} from "@angular/router"
 import { MasterPageComponent } from './quizapp.masterpagecomponent';
 import { HomeComponent } from './quizapp.homecomponent';
-import { questioncomponent } from '../question/quizapp.questioncomponent';
 
 @NgModule({
   imports:      [
     RouterModule.forRoot(MainRoutes), BrowserModule, FormsModule ],
-  declarations: [ MasterPageComponent, HomeComponent,questioncomponent],
+  declarations: [ MasterPageComponent, HomeComponent],
   bootstrap:    [ MasterPageComponent ]
 })
 export class AppModule { }

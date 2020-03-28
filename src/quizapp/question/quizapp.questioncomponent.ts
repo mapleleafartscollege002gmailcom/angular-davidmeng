@@ -1,10 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component, Injector  } from '@angular/core';
 
 import {Question} from "../home/quizapp.question.model";
 import {Answer} from "../home/quizapp.answer.model";
 import { HomeComponent } from '../home/quizapp.homecomponent';
 @Component({ 
-  templateUrl: './quizapp.ques2view.html',
+  templateUrl: './quizapp.questionview.html',
   styles: [`h1 { font-family: Lato; }`]
 })
 export class questioncomponent  {

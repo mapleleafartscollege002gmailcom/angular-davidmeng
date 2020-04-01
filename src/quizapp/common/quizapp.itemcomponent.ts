@@ -15,7 +15,6 @@ export class ItemComponent{
     answers: Array<Object> = new Array<Object>();
     question : Question = new Question();
     selectAnswer: string="";
-    showSummary: boolean=false;
     
     @Input("form-questions")
     set setQuestions(_questions:Array<Question>){

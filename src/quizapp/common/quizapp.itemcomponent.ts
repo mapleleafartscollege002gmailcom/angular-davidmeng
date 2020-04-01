@@ -4,27 +4,34 @@ import {Component,
     EventEmitter} from "@angular/core"
 
 @Component({
-    selector: "question-ui",
-    templateUrl : "./quizapp.formview.html"
+    selector: "item-ui",
+    templateUrl : "./quizapp.itemview.html"
 })
 
-export class FormComponent{
+export class ItemComponent{
   
     questions: Array<Object> = new Array<Object>();
     answers: Array<Object> = new Array<Object>();
     question : Object = new Object();
     selectAnswer: string="";
     showSummary: boolean=false;
+    constructor(){
+ alert(this.answers.length) ;
+       if(this.answers.length==5)
+       {
+          this.showSummary = true;
+       }
+    }
 
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
-       this.questions = _questions;  //   alert(this.answers.length) ;
+       this.questions = _questions;     alert(this.answers.length) ;
        this.question = this.questions[this.answers.length];
     }
     
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
-        this.answers = _answers;   // alert(this.answers.length) ;
+        this.answers = _answers;    alert(this.answers.length) ;
         this.question = this.questions[this.answers.length];
     }
     
@@ -36,10 +43,6 @@ export class FormComponent{
        // this.answers.push(this.selectAnswer);
        this.question = this.questions[this.answers.length]; 
 
-       if(this.answers.length==5)
-       {
-          this.showSummary = true;
-       }
-       // alert(this.answers.length) ;
+        alert(this.answers.length) ;
     }    
 }

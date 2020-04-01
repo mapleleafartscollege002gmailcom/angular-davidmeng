@@ -59,6 +59,10 @@ this.QuestionModels.push(this.QuestionModel);
     //alert('received');
     this.AnswerModels.push(this.AnswerModel);
   }
-
+  
+  isSubmitted : boolean=false;
+  DecideSubmit(_selected:boolean){
+    this.isSubmitted = _selected;    
+  }
 
 }

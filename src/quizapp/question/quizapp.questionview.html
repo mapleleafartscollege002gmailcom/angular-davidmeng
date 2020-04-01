@@ -1,7 +1,22 @@
 
+<div [hidden]="isSubmitted">
+  <item-ui [hidden]="AnswerModels.length==5"
+    [form-questions]="QuestionModels" 
+    [form-answers]="AnswerModels"
+    (answer-selected)="SelectAnswer($event)"
+  ></item-ui>
 
-        
-<question-ui ngHide="isHidden" [form-questions]="QuestionModels" 
-  [form-answers]="AnswerModels"
-  (answer-selected)="SelectAnswer($event)"
-></question-ui>
+  <review-ui [hidden]="AnswerModels.length<5"
+    [form-questions]="QuestionModels" 
+    [form-answers]="AnswerModels"
+    (decide-submit)="DecideSubmit($event)"
+  ></review-ui>
+</div>
+
+<div [hidden]="!isSubmitted">
+  <summary-ui 
+    [form-questions]="QuestionModels" 
+    [form-answers]="AnswerModels"
+    (decide-submit)="DecideSubmit($event)"
+  ></summary-ui>
+</div>

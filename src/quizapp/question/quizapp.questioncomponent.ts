@@ -56,7 +56,8 @@ this.QuestionModels.push(this.QuestionModel);
   SelectAnswer(_selected:Answer){
     this.AnswerModel = _selected;
     //alert('received');
-    this.AnswerModels.push(this.AnswerModel);
+    if(this.AnswerModels.length < 5)
+      this.AnswerModels.push(this.AnswerModel);
   }
   
   isSubmitted : boolean=false;

@@ -3,6 +3,7 @@ import {Component,
     Output,
     EventEmitter} from "@angular/core"
 
+import {Question} from "../home/quizapp.question.model"
 @Component({
     selector: "item-ui",
     templateUrl : "./quizapp.itemview.html"
@@ -10,21 +11,21 @@ import {Component,
 
 export class ItemComponent{
   
-    questions: Array<Object> = new Array<Object>();
+    questions: Array<Question> = new Array<Question>();
     answers: Array<Object> = new Array<Object>();
-    question : Object = new Object();
+    question : Question = new Question();
     selectAnswer: string="";
     showSummary: boolean=false;
     
     @Input("form-questions")
-    set setQuestions(_questions:Array<Object>){
-       this.questions = _questions;     alert(this.answers.length) ;
+    set setQuestions(_questions:Array<Question>){
+       this.questions = _questions;    
        this.question = this.questions[this.answers.length];
     }
     
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
-        this.answers = _answers;    alert(this.answers.length) ;
+        this.answers = _answers;    
         this.question = this.questions[this.answers.length];
     }
     
@@ -35,7 +36,5 @@ export class ItemComponent{
        this.eventemitter.emit(this.selectAnswer);
        // this.answers.push(this.selectAnswer);
        this.question = this.questions[this.answers.length]; 
-
-        alert(this.answers.length) ;
     }    
 }

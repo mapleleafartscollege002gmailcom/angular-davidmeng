@@ -1,13 +1,6 @@
-<div>Question View</div>
 
-<table>
-  <tr>
-    <td *ngFor="let ans of AnswerModels">
-      {{ans}}
-    </td>
-  </tr>
-</table>
 
+        
 <question-ui ngHide="isHidden" [form-questions]="QuestionModels" 
   [form-answers]="AnswerModels"
   (answer-selected)="SelectAnswer($event)"

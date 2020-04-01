@@ -1,20 +1,20 @@
+    <div class="card ">
+            <div class="card-header">Question {{question.ID}}</div>
+            <div class="card-block">
+              
+
 <div>
     <div class="panel-header"></div>
     <div class="panel-body">
         <div class="row">{{question.Description}}</div>
         <div class="row">
-          <table>   
-            <tr>
-                  <td *ngFor="let opt of question.Options">
-                    <input type="radio" value={{opt}} name="OPTI" [(ngModel)]="selectAnswer"> {{opt}}
-                  </td>
-            </tr>
-            <tr>
-                  <td *ngFor="let ans of answers">
-                   {{ans}}
-                  </td>
-            </tr>
-          </table>
+          
+          <!-- Default inline 1-->
+<div class="custom-control custom-radio custom-control-inline" *ngFor="let opt of question.Options">
+  <input type="radio" value={{opt}} name="OPTI" [(ngModel)]="selectAnswer" class="custom-control-input" id="{{opt}}" name="inlineDefaultRadiosExample">
+  <label class="custom-control-label" for="{{opt}}">{{opt}}</label>
+</div>
+
         </div>
         
         {{selectAnswer}}
@@ -23,18 +23,8 @@
         <button class="btn btn-primary" (click) = "SelectAnswer()" >Next</button>
     </div>
 </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+            </div>
+    </div>
+
+
   

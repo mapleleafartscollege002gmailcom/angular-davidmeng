@@ -53,7 +53,6 @@ this.QuestionModel.RightAnswer = 'Alexander Graham Bell';
 this.QuestionModels.push(this.QuestionModel);
    }
 
-
   SelectAnswer(_selected:Answer){
     this.AnswerModel = _selected;
     //alert('received');
@@ -65,4 +64,8 @@ this.QuestionModels.push(this.QuestionModel);
     this.isSubmitted = _selected;    
   }
 
+  DecideNoSubmit(_selected:boolean){
+    this.isSubmitted = _selected;   
+    this.AnswerModels = new Array<Answer>();
+  }
 }

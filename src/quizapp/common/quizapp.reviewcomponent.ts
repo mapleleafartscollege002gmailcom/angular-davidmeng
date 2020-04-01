@@ -5,17 +5,17 @@ import {Component,
 
 @Component({
     selector: "item-ui",
-    templateUrl : "./quizapp.itemview.html"
+    templateUrl : "./quizapp.reviewview.html"
 })
 
-export class ItemComponent{
+export class ReviewComponent{
   
     questions: Array<Object> = new Array<Object>();
     answers: Array<Object> = new Array<Object>();
     question : Object = new Object();
     selectAnswer: string="";
-    showSummary: boolean=false;
-    
+    showSummary: boolean=false;    
+
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
        this.questions = _questions;     alert(this.answers.length) ;
@@ -28,14 +28,15 @@ export class ItemComponent{
         this.question = this.questions[this.answers.length];
     }
     
-    @Output("answer-selected")
-    eventemitter: EventEmitter<Object> = new EventEmitter<Object>();
-    SelectAnswer(){
-      //alert(123);
-       this.eventemitter.emit(this.selectAnswer);
-       // this.answers.push(this.selectAnswer);
-       this.question = this.questions[this.answers.length]; 
+    @Output("decide-submit")
+    eventemitter1: EventEmitter<Object> = new EventEmitter<Object>();
+    decideSubmit(){
+       this.eventemitter1.emit(true);
+    }    
 
-        alert(this.answers.length) ;
+    @Output("decide-no-submit")
+    eventemitter2: EventEmitter<Object> = new EventEmitter<Object>();
+    decideNoSubmit(){
+       this.eventemitter2.emit(true);
     }    
 }

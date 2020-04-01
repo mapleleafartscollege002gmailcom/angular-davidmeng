@@ -4,13 +4,13 @@ import {NgModule } from '@angular/core';
 import {FormsModule , ReactiveFormsModule} from "@angular/forms"
 import {RouterModule} from "@angular/router"
 import {questioncomponent } from './quizapp.questioncomponent';
-import {FormComponent} from "../common/quizapp.formcomponent"
+import {ItemComponent} from "../common/quizapp.itemcomponent"
 import {QuestionRoutes } from '../routing/quizapp.questionrouting';
 
 @NgModule({  
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-     questioncomponent , FormComponent
+     questioncomponent , ItemComponent
   ],
   imports: [
     RouterModule.forChild(QuestionRoutes),

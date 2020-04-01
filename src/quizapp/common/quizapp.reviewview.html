@@ -1,0 +1,52 @@
+    <div class="card ">
+            <div class="card-header">Question {{question.ID}}</div>
+            <div class="card-block">
+              
+                <!--header-->
+                <div class="panel-header" >
+                </div>
+
+                <!--end of header-->
+                <!--body-->
+                  <div class="panel-body" >
+                    <div *ngFor="let ques of questions">                    
+                          <br/>
+                          <div class="text-center">
+                          <h4>{{ques.Description}}</h4>
+                          </div>
+                          <br/>                          
+                          <div class="text-center">
+                            <span>          
+                                <!-- Default inline 1-->
+                                <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options">
+                                  <input type="radio" value={{opt}} name="OPTI" [(ngModel)]="selectAnswer" class="custom-control-input" id="{{opt1}}readonly" name="inlineDefaultRadiosExample">
+                                  <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
+                                </div>
+                            </span>
+                          </div>                   
+                    </div>
+                      <br/>
+                      <br/>
+                      <br/>        
+                  </div>
+                  
+                <!--end body-->
+                  <div class="panel-footer">
+                    <div class="text-center">
+                        <button class="btn btn-primary" (click) = "SelectAnswer()" >Next</button>
+                    </div>
+
+                      <br/>
+                      <br/>
+                      <br/>        
+
+                      <br/>
+                      <br/>
+                      <br/>        
+                  </div>
+
+            </div>
+    </div>
+
+
+  

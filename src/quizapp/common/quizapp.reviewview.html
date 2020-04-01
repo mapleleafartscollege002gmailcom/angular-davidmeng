@@ -19,7 +19,7 @@
                             <span>          
                                 <!-- Default inline 1-->
                                 <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options">
-                                  <input type="radio" value={{opt}} name="OPTI" [(ngModel)]="selectAnswer" class="custom-control-input" id="{{opt1}}readonly" name="inlineDefaultRadiosExample">
+                                  <input type="radio" value={{opt}} name="OPTI" [(ngModel)]={{answers[ques.ID]}} class="custom-control-input" id="{{opt1}}readonly" name="inlineDefaultRadiosExample">
                                   <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
                                 </div>
                             </span>
@@ -33,7 +33,8 @@
                 <!--end body-->
                   <div class="panel-footer">
                     <div class="text-center">
-                        <button class="btn btn-primary" (click) = "SelectAnswer()" >Next</button>
+                        <button class="btn btn-primary" (click) = "decideSubmit()" >Submit</button>
+                        <button class="btn btn-primary" (click) = "decideNoSubmit()" >Redo</button>
                     </div>
 
                       <br/>

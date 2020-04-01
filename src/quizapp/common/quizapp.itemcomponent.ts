@@ -19,12 +19,16 @@ export class ItemComponent{
     @Input("form-questions")
     set setQuestions(_questions:Array<Question>){
        this.questions = _questions;    
-       this.question = this.questions[this.answers.length];
+    this.question = new Question();
+       if(this.answers.length >= 0 && this.answers.length <5)
+        this.question = this.questions[this.answers.length];
     }
     
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
         this.answers = _answers;    
+    this.question = new Question();
+       if(this.answers.length >= 0 && this.answers.length <5)
         this.question = this.questions[this.answers.length];
     }
     
@@ -34,6 +38,8 @@ export class ItemComponent{
       //alert(123);
        this.eventemitter.emit(this.selectAnswer);
        // this.answers.push(this.selectAnswer);
-       this.question = this.questions[this.answers.length]; 
+    this.question = new Question(); 
+       if(this.answers.length >= 0 && this.answers.length <5)
+        this.question = this.questions[this.answers.length];
     }    
 }

@@ -50,23 +50,22 @@ this.QuestionModel.ID = 5;
 this.QuestionModel.Description = ' Who invented telephone';
 this.QuestionModel.Options = ['Albert Einstein', 'Alexander Graham Bell', 'Isaac Newton', 'Marie Curie'];
 this.QuestionModel.RightAnswer = 'Alexander Graham Bell';
-this.QuestionModels.push(this.QuestionModel);
+this.QuestionModels.push(this.QuestionModel); 
    }
 
   SelectAnswer(_selected:Answer){
     this.AnswerModel = _selected;
-    //alert('received');
-    if(this.AnswerModels.length < 5)
+    if(this.AnswerModels.length < 4)
       this.AnswerModels.push(this.AnswerModel);
   }
   
   isSubmitted : boolean=false;
-  DecideSubmit(_selected:boolean){
-    this.isSubmitted = _selected;    
+  DecideSubmit(_issubmitted:boolean){
+    this.isSubmitted = _issubmitted;    
   }
 
-  DecideNoSubmit(_selected:boolean){
-    this.isSubmitted = _selected;   
+  DecideNoSubmit(_issubmitted:boolean){
+    this.isSubmitted = _issubmitted;   
     this.AnswerModels = new Array<Answer>();
   }
 }

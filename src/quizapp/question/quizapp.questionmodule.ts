@@ -5,12 +5,13 @@ import {FormsModule , ReactiveFormsModule} from "@angular/forms"
 import {RouterModule} from "@angular/router"
 import {questioncomponent } from './quizapp.questioncomponent';
 import {ItemComponent} from "../common/quizapp.itemcomponent"
+import {ReviewComponent} from "../common/quizapp.reviewcomponent"
 import {QuestionRoutes } from '../routing/quizapp.questionrouting';
 
 @NgModule({  
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-     questioncomponent , ItemComponent
+     questioncomponent , ItemComponent, ReviewComponent
   ],
   imports: [
     RouterModule.forChild(QuestionRoutes),

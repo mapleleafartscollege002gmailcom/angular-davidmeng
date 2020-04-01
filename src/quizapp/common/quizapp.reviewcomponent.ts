@@ -4,7 +4,7 @@ import {Component,
     EventEmitter} from "@angular/core"
 
 @Component({
-    selector: "item-ui",
+    selector: "review-ui",
     templateUrl : "./quizapp.reviewview.html"
 })
 
@@ -18,13 +18,13 @@ export class ReviewComponent{
 
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
-       this.questions = _questions;     alert(this.answers.length) ;
+       this.questions = _questions;    
        this.question = this.questions[this.answers.length];
     }
     
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
-        this.answers = _answers;    alert(this.answers.length) ;
+        this.answers = _answers;    
         this.question = this.questions[this.answers.length];
     }
     
@@ -37,6 +37,6 @@ export class ReviewComponent{
     @Output("decide-no-submit")
     eventemitter2: EventEmitter<Object> = new EventEmitter<Object>();
     decideNoSubmit(){
-       this.eventemitter2.emit(true);
+       this.eventemitter2.emit(false);
     }    
 }

@@ -1,12 +1,12 @@
 
 <div [hidden]="isSubmitted">
-  <item-ui [hidden]="AnswerModels.length==5"
+  <item-ui [hidden]="AnswerModels.length==4"
     [form-questions]="QuestionModels" 
     [form-answers]="AnswerModels"
     (answer-selected)="SelectAnswer($event)"
   ></item-ui>
 
-  <review-ui [hidden]="AnswerModels.length<5"
+  <review-ui [hidden]="AnswerModels.length!=4"
     [form-questions]="QuestionModels" 
     [form-answers]="AnswerModels"
     (decide-submit)="DecideSubmit($event)"

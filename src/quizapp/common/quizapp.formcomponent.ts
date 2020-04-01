@@ -14,6 +14,7 @@ export class FormComponent{
     answers: Array<Object> = new Array<Object>();
     question : Object = new Object();
     selectAnswer: string="";
+    showSummary: boolean=false;
 
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
@@ -31,9 +32,14 @@ export class FormComponent{
     eventemitter: EventEmitter<Object> = new EventEmitter<Object>();
     SelectAnswer(){
       //alert(123);
-        this.eventemitter.emit(this.selectAnswer);
+       this.eventemitter.emit(this.selectAnswer);
        // this.answers.push(this.selectAnswer);
        this.question = this.questions[this.answers.length]; 
+
+       if(this.answers.length==5)
+       {
+          this.showSummary = true;
+       }
        // alert(this.answers.length) ;
     }    
 }

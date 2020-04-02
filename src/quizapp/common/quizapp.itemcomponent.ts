@@ -35,6 +35,7 @@ export class ItemComponent{
     SelectAnswer(){
       this.eventemitter.emit(this.selectAnswer);
       this.question = new Question(); 
-      this.question = this.questions[this.answers.length];
+      if(this.answers.length<5){
+      this.question = this.questions[this.answers.length];}
     }    
 }

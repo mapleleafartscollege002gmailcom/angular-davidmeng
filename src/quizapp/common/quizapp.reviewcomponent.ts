@@ -13,7 +13,7 @@ export class ReviewComponent{
   
     questions: Array<Question> = new Array<Question>();
     answers: Array<Object> = new Array<Object>();
-    question : Question = new Question();
+    //question : Question = new Question();
     selectAnswer: string="";
     showSummary: boolean=false;    
     isSelect: boolean=true; 
@@ -21,13 +21,13 @@ export class ReviewComponent{
     @Input("form-questions")
     set setQuestions(_questions:Array<Question>){
        this.questions = _questions;    
-       this.question = this.questions[this.answers.length];
+       //this.question = this.questions[this.answers.length];
     }
     
     @Input("form-answers")
     set setAnswers(_answers:Array<Object>){
         this.answers = _answers;    
-        this.question = this.questions[this.answers.length];
+        //this.question = this.questions[this.answers.length];
     }
     
     @Output("decide-submit")

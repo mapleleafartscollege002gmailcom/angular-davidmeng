@@ -28,7 +28,19 @@
                           </div>                    
                           <br/>
                           <div class="text-center">
-                          <h4>{{ques.Description}}</h4>
+                            <div *ngIf="answers[ques.ID-1]==ques.RightAnswer; else notShow">
+          <span class="glyphicon glyphicon-ok"></span>
+  <p> You choose the right answer
+  </p>
+</div>
+
+<ng-template #notShow> <span class="glyphicon glyphicon-remove"></span>
+  <p>
+         The right answer is {{ques.RightAnswer}}
+  </p>
+</ng-template>
+                      
+                            
                           </div>
                           <br/>            
                     </div>

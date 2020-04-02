@@ -4,8 +4,7 @@ import {Question} from "../home/quizapp.question.model";
 import {Answer} from "../home/quizapp.answer.model";
 import { HomeComponent } from '../home/quizapp.homecomponent';
 @Component({ 
-  templateUrl: './quizapp.questionview.html',
-  styleUrls: [ '../home/quizapp.masterpagestyle.css' ]
+  templateUrl: './quizapp.questionview.html'
 })
 export class questioncomponent  {
 

@@ -37,5 +37,6 @@ export class ItemComponent{
       this.question = new Question(); 
       if(this.answers.length<5){
       this.question = this.questions[this.answers.length];}
+      this.selectAnswer="";
     }    
 }

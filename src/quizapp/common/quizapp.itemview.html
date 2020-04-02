@@ -34,7 +34,7 @@
                 <!--end body-->
                   <div class="panel-footer">
                       <div class="text-center">
-                          <button class="btn btn-primary" (click) = "SelectAnswer()" >Next</button>
+                          <button class="btn btn-primary" [disabled]="selectAnswer==''" (click) = "SelectAnswer()" >Next</button>
                       </div>
 
                       <br/>

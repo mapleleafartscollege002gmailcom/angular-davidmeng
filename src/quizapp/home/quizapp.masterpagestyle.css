@@ -12,7 +12,4 @@ border:1 red;
 }
 
 h1 { font-family: Lato; }
-
- container {
-    padding-top: 7000px;
-  }
+header { padding-top: 40px; }

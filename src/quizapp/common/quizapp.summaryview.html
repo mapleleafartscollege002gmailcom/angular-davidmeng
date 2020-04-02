@@ -1,74 +1,69 @@
-    <div class="card ">
-            <div class="card-header">Survey Results</div>
-            <div class="card-block">
-              
-                <!--header-->
-                <div class="panel-header" >
-                </div>
+<div class="card ">
+	<div class="card-header">Survey Results</div>
+	<div class="card-block">
 
-                <!--end of header-->
-                <!--body-->
-                  <div class="panel-body" >
-                    
-                    <div *ngFor="let ques of questions">                    
-                          <br/>
-                          <div class="text-center">
-                          <h4>{{ques.Description}}</h4>
-                          </div>
-                          <br/>                          
-                          <div class="text-center">
-                            <span>          
-                                <!-- Default inline 1-->
-                                <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options">
-                                  <input type="radio" name="Summary{{ques.ID}}OPTI" 
-                                  class="custom-control-input" id="{{opt1}}readonly" value={{opt1}} [checked]="answers[ques.ID-1]==opt1" disabled mdbInput>
-                                  <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
-                                </div>
-                            </span>
-                          </div>                    
-                          <br/>
-                          <div class="text-center">
-                            <div *ngIf="answers[ques.ID-1]==ques.RightAnswer; else notShow">
-          <span class="glyphicon glyphicon-ok"></span>
-  <p> You choose the right answer
-  </p>
-</div>
+		<!--header-->
+		<div class="panel-header">
+		</div>
 
-<ng-template #notShow> <span class="glyphicon glyphicon-remove"></span>
-  <p>
-         The right answer is {{ques.RightAnswer}}
-  </p>
-</ng-template>
-                      
-                            
-                          </div>
-                          <br/>            
-                    </div>
-                      <br/>
-                      <br/>
-                      <br/>        
-                  </div>
-                  
-                <!--end body-->
-                  <div class="panel-footer">
-                    <div class="text-center">
+		<!--end of header-->
+		<!--body-->
+		<div class="panel-body">
 
-      <a class="btn btn-primary btn-lg active" role="button" aria-pressed="true" [routerLink]="['contact/view']">Complete</a>
+			<div *ngFor="let ques of questions">
+				<br/>
+				<div class="text-center">
+					<h4>{{ques.ID}}. {{ques.Description}}</h4>
+				</div>
+				<br/>
+				<div class="text-center">
+					<span>
+              <!-- Default inline 1-->
+              <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options">
+                <input type="radio" name="Summary{{ques.ID}}OPTI" 
+                class="custom-control-input" id="{{opt1}}readonly" value={{opt1}} [checked]="answers[ques.ID-1]==opt1" disabled mdbInput>
+                <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
+              </div>
+          </span>
+				</div>
+				<br/>
+				<div class="text-center">
+					<div *ngIf="answers[ques.ID-1]==ques.RightAnswer; else notShow">
 
-      
-                    </div>
+						<p> <span class="glyphicon glyphicon-ok"></span> Correct!, You choose the right answer
+						</p>
+					</div>
 
-                      <br/>
-                      <br/>
-                      <br/>        
+					<ng-template #notShow>
+						<p> <span class="glyphicon glyphicon-remove"></span> Wrong!
+							The right answer is {{ques.RightAnswer}}
+						</p>
+					</ng-template>
+				</div>
+				<br/>
+      </div>
+				<br/>
+				<br/>
+				<br/>
+        </div>
 
-                      <br/>
-                      <br/>
-                      <br/>        
-                  </div>
+				<!--end body-->
+				<div class="panel-footer">
+					<div class="text-center">
 
-            </div>
-    </div>
+						<a class="btn btn-primary btn-lg active" role="button" aria-pressed="true"
+							[routerLink]="['']">Complete</a>
 
+					</div>
 
-  
+					<br/>
+					<br/>
+					<br/>
+
+					<br/>
+					<br/>
+					<br/>
+        </div>
+
+				</div>
+			</div>

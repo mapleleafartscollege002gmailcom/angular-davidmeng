@@ -55,7 +55,7 @@ this.QuestionModels.push(this.QuestionModel);
 
   SelectAnswer(_selected:Answer){
     this.AnswerModel = _selected;
-    if(this.AnswerModels.length < 4)
+    if(this.AnswerModels.length < 5)
       this.AnswerModels.push(this.AnswerModel);
   }
   

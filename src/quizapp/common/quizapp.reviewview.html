@@ -19,7 +19,7 @@
                             <span>          
                                 <!-- Default inline 1-->
                                 <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options, let i of index">
-                                  <input type="radio" value={{opt}} name="OPTI" [ngModel]="answers[ques.ID]"
+                                  <input type="radio" value={{opt}} name="OPTI" [checked]="true"
                                   class="custom-control-input" id="{{opt1}}readonly" name="inlineDefaultRadiosExample">
                                   <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
                                 </div>

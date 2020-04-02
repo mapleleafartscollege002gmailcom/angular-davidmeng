@@ -20,7 +20,7 @@
                             <span>          
                                 <!-- Default inline 1-->
                                 <div class="custom-control custom-radio custom-control-inline" *ngFor="let opt1 of ques.Options">
-                                  <input type="radio" name="{{ques.ID}}OPTI" 
+                                  <input type="radio" name="Summary{{ques.ID}}OPTI" 
                                   class="custom-control-input" id="{{opt1}}readonly" value={{opt1}} [checked]="answers[ques.ID-1]==opt1" disabled mdbInput>
                                   <label class="custom-control-label" for="{{opt1}}readonly">{{opt1}}</label>
                                 </div>

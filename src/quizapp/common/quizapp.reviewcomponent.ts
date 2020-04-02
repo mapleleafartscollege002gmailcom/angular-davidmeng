@@ -3,6 +3,7 @@ import {Component,
     Output,
     EventEmitter} from "@angular/core"
 
+import {Question} from "../home/quizapp.question.model"
 @Component({
     selector: "review-ui",
     templateUrl : "./quizapp.reviewview.html"
@@ -10,15 +11,15 @@ import {Component,
 
 export class ReviewComponent{
   
-    questions: Array<Object> = new Array<Object>();
+    questions: Array<Question> = new Array<Question>();
     answers: Array<Object> = new Array<Object>();
-    question : Object = new Object();
+    question : Question = new Question();
     selectAnswer: string="";
     showSummary: boolean=false;    
     isSelect: boolean=true; 
 
     @Input("form-questions")
-    set setQuestions(_questions:Array<Object>){
+    set setQuestions(_questions:Array<Question>){
        this.questions = _questions;    
        this.question = this.questions[this.answers.length];
     }
@@ -40,4 +41,8 @@ export class ReviewComponent{
     decideNoSubmit(){
        this.eventemitter2.emit(false);
     }    
+
+    getSelectValue(_i:number){
+      return this.answers[_i];
+    }
 }

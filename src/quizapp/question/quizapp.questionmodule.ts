@@ -6,12 +6,13 @@ import {RouterModule} from "@angular/router"
 import {questioncomponent } from './quizapp.questioncomponent';
 import {ItemComponent} from "../common/quizapp.itemcomponent"
 import {ReviewComponent} from "../common/quizapp.reviewcomponent"
+import {SummaryComponent} from "../common/quizapp.summarycomponent"
 import {QuestionRoutes } from '../routing/quizapp.questionrouting';
 
 @NgModule({  
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
-     questioncomponent , ItemComponent, ReviewComponent
+     questioncomponent , ItemComponent, ReviewComponent, SummaryComponent
   ],
   imports: [
     RouterModule.forChild(QuestionRoutes),

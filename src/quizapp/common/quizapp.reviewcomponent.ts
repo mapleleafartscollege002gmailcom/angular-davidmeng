@@ -15,6 +15,7 @@ export class ReviewComponent{
     question : Object = new Object();
     selectAnswer: string="";
     showSummary: boolean=false;    
+    isSelect: boolean=true; 
 
     @Input("form-questions")
     set setQuestions(_questions:Array<Object>){
